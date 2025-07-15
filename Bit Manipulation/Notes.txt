@@ -1,0 +1,26 @@
+00000101
+Least significant bit (lsb) = 1
+most  significant bit (msb) = 0
+if msb is 0 then the decimal form of binary is +ve 
+00000101 -> 5
+where as 
+10000101 -> -5
+
+if u just compliment the value and print like 
+sout(~5) = -6
+why ??
+the reason is 2`s compliment is used for inverting operation
+
+* ~0 is -1 , why??
+In Java, System.out.println(~0) outputs -1 because the ~ operator inverts all bits of the 
+number. For 0, which is represented as 00000000 00000000 00000000 00000000 in binary,
+ applying ~ flips it to 11111111 11111111 11111111 11111111. In Java's two's complement
+  system, this binary value represents -1 because the most significant bit (MSB) is 1, 
+  indicating a negative number. To compute its value, you invert the bits (000...000) and 
+  add 1, resulting in 1. Hence, the final value is -1.
+
+
+  left shift (<<):
+    formula : A<<B = A*2^B;
+  right shift (>>):
+    formula : A<<B = A/2^B;

@@ -1,0 +1,6 @@
+Implementation of Arraylist 
+How Dynamic??
+so imagine an array there you allocate a size so when the size limit is reached it over 
+but in Arraylist its not the way but Alike the same 
+it allocate a specific size when it is filled it copies to differnet array with a larger size than before this might be x1 , x0.5 , x2 depends on versions
+typically it is x1.5 (10 -> 15)

@@ -1,0 +1,5 @@
+finding mid important point:
+    When using the slow-fast pointer approach to find the middle of a singly linked list, the way we initialize the fast pointer determines whether we get:
+
+    The first node of the second half (when even number of nodes) → Initialize fast = head
+    The last node of the first half (when even number of nodes) → Initialize fast = head.next
