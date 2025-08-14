@@ -1,5 +1,6 @@
 package BackTracking;
 
+// permutations : for n length there exist n! permutations
 public class permutations {
     public static void findPerpu(String str, String ans) {
         // base case
