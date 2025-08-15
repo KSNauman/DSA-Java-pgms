@@ -44,3 +44,45 @@ public class PairsInArrays {
  * to calculate the number of pairs 
  * use formula n(n-1)/2
  */
+
+ /*
+ * This program demonstrates three important array-related operations:
+ * 
+ * 1. pairs(int[] arr)
+ *    - Prints all possible unique pairs of elements from the array.
+ *    - Uses two nested loops:
+ *        Outer loop fixes the first element.
+ *        Inner loop picks the second element from the remaining array elements.
+ *    - Example (for arr = {1, 2, 3}):
+ *        (1,2) (1,3)
+ *        (2,3)
+ *        (3)
+ *    - Number of pairs can be calculated using the formula: n(n-1)/2
+ * 
+ * 2. subArrays(int[] arr)
+ *    - Prints all possible subarrays of the given array.
+ *    - Uses three nested loops:
+ *        Outer loop chooses the starting index (i).
+ *        Middle loop chooses the ending index (j).
+ *        Inner loop prints elements from i to j (the subarray).
+ *    - Example (for arr = {1, 2}):
+ *        1
+ *        12
+ *
+ *        2
+ *
+ * 3. sumOfSubArrays(int[] arr)
+ *    - Prints all subarrays along with their sum.
+ *    - Similar to subArrays method but keeps a 'sum' variable to accumulate the sum of each subarray.
+ *    - 'sum' is reinitialized to 0 for each subarray to avoid carrying over values.
+ *    - Example (for arr = {1, 2}):
+ *        1    sum is: 1
+ *        12   sum is: 3
+ *
+ *        2    sum is: 2
+ * 
+ * main method:
+ *    - Initializes an array {1, 2, 3, 4, 5}.
+ *    - Calls one of the methods (currently all method calls are commented out).
+ *    - Uncomment a method call to see its output.
+ */

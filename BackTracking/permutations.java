@@ -16,8 +16,14 @@ public class permutations {
             findPerpu(newStr, ans + curr);
         }
     }
-
     public static void main(String[] args) {
         findPerpu("abc", " ");
     }
 }
+// output:
+//  abc
+//  acb
+//  bac
+//  bca
+//  cab
+//  cba

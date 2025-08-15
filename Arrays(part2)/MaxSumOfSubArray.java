@@ -86,3 +86,9 @@ public class MaxSumOfSubArray {
         maxSubArray(arrr);
     }
 }
+
+/* tendency of max and min function 
+ * carefully analyze the var which  is first initialized suppose u check 
+ * Math.max(0,arr[i]) so this will always skip -ve values as 0 is set as lower boundary 
+ * same thing vice versa for Math.min
+ */
