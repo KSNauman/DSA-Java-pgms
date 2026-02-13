@@ -1,0 +1,51 @@
+package Trie;
+
+// Root is an empty entry point
+// Each node contains:
+// an array of 26 references to child nodes
+// a boolean marking word termination
+// Nodes are created lazily (only when needed)
+// Paths represent prefixes, not words themselves
+
+public class Implementation{
+    static class Node{
+        Node children[] = new Node[26];
+        boolean eow = false;
+
+        Node(){
+            for(int i = 0 ; i <26 ; i++){
+                children[i]= null;
+            }
+        }
+    }
+    public static Node root = new Node();
+    public static void insert(String word){
+        Node curr = root;
+        for(int level = 0 ; level<word.length() ; level++){
+            int idx = word.charAt(level)-'a';
+            if (curr.children[idx] == null) {
+                curr.children[idx] = new Node();
+            }
+            curr = curr.children[idx];
+        }
+        curr.eow = true;
+    }
+    public static boolean search(String word){
+        Node curr = root;
+        for(int level=0; level < word.length() ; level++){
+            int idx = word.charAt(level)-'a';
+            if (curr.children[idx]==null) {
+                return false;
+            }
+            curr=curr.children[idx];
+        }
+        return curr.eow==true;
+    }
+    public static void main(String[] args) {
+        String[] words = {"the","a","there","their","any","thee"};
+        for (String str : words) {
+            insert(str);
+        }
+        System.out.println(search("there"));
+    }
+}

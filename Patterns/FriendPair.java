@@ -1,4 +1,4 @@
-import Recursion01.rec;
+// import Recursion01.rec;
 
 public class FriendPair {
     public static int fp(int n) {
