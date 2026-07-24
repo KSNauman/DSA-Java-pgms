@@ -139,7 +139,8 @@ public class Main {
         // Reverse();
         // Max();
         // Swap2Num();
-        Sort();
-
+        // Sort();
+        System.out.println(args);
+        ArrayList<Integer> al = new ArrayList<>();
     }
 }
