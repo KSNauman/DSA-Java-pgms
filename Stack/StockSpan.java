@@ -1,59 +1,64 @@
-import java.util.*;
+// package Stack;
 
+import java.util.Stack;
+
+/**
+ * Topic: Stack
+ * Problem: Stock Span Problem
+ * 
+ * Description: 
+ * The span of the stock's price today is defined as the maximum number of consecutive 
+ * days (starting from today and going backward) for which the price of the stock 
+ * was less than or equal to today's price.
+ * 
+ * Intuition:
+ * Use a stack to maintain the indices of the previous higher prices.
+ * For each day, pop elements from the stack while the stack is not empty and 
+ * the current price is greater than the price at the top of the stack.
+ * If the stack becomes empty, it means all previous prices were smaller, so span = day + 1.
+ * Otherwise, span = day - index of previous higher price.
+ * 
+ * Complexity: O(N) Time (each element is pushed/popped at most once), O(N) Space.
+ */
 public class StockSpan {
-
-    public static void stockSpan(int stocks[], int span[]) {
+    public static void stockSpan(int[] stocks, int[] span) {
         Stack<Integer> s = new Stack<>();
-        // for first day span is 1
+        
+        // Base case: span for the first day is always 1
         span[0] = 1;
         s.push(0);
 
         for (int i = 1; i < stocks.length; i++) {
-            // this for loop used to go at the particular day and get the current price
             int currPrice = stocks[i];
-            while (!s.isEmpty() && currPrice > stocks[s.peek()]) {
-                // this loop is ensuring that the previous element in the
-                // stack is not the lower value than current price
-                // Removing all lower values from the stack since they cannot be part of the
-                // span
-
-                /*
-                 * another way : when u take current price u take a look that the
-                 * stack is not having lesser than value of currprice as
-                 * higher cannot take seat on lower
-                 * The stack maintains indices of previous higher stock prices.
-                 * If the current stock price is greater than the one at the top of the stack,
-                 * we pop elements until we find a higher price.
-                 * 
-                 * for ex: currPrice 30
-                 * and in stack u have 25
-                 * 30 cannot be seated on 25 so 25 will be poped out and 30 will pushed
-                 */
+            
+            // Pop while current price is greater than or equal to the price at the stack's top index
+            while (!s.isEmpty() && currPrice >= stocks[s.peek()]) {
                 s.pop();
             }
+            
+            // If stack is empty, all previous elements were smaller
             if (s.isEmpty()) {
-                // If stack is empty, it means no greater element exists on the left, so span =
-                // i+1
-
                 span[i] = i + 1;
             } else {
                 int prevHigh = s.peek();
-                // bycoming to this step u will have the stack in an series
-                // so last element will be high ie prevHigh so subtracting with the currday
-                // price ull get the span
                 span[i] = i - prevHigh;
             }
 
+            // Push current index
             s.push(i);
         }
-
     }
 
     public static void main(String[] args) {
-        int stock[] = { 100, 80, 60, 70, 60, 85, 100 };
-        int span[] = new int[stock.length];
+        int[] stock = { 100, 80, 60, 70, 60, 85, 100 };
+        int[] span = new int[stock.length];
+        
         stockSpan(stock, span);
 
+        System.out.println("Stock Prices: ");
+        for (int p : stock) System.out.print(p + " ");
+        
+        System.out.println("\nSpans: ");
         for (int i = 0; i < span.length; i++) {
             System.out.print(span[i] + " ");
         }

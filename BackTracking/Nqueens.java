@@ -1,64 +1,63 @@
-package BackTracking;
+// package BackTracking;
 
-
-public class Nqueens {
+/**
+ * Topic: Backtracking
+ * Problem: N-Queens Problem
+ * 
+ * Description: 
+ * Place N queens on an NxN chessboard such that no two queens attack each other.
+ * This class includes methods to count solutions, print all solutions, and print a single solution.
+ * 
+ * Intuition:
+ * Use backtracking. Try placing a queen in each column of the current row. 
+ * Before placing, check if it's safe (no other queen in the same column, left-diagonal, or right-diagonal).
+ * If safe, place the queen, move to the next row, and recursively try to place the rest.
+ * Backtrack by removing the queen (setting it back to '.') and trying the next column.
+ * 
+ * Complexity: O(N!) Time, O(N^2) Space.
+ */
+public class NQueens {
     public static int count = 0;
 
     public static boolean issafe(char[][] board, int row, int col) {
-        // vertical up
+        // Check vertical up
         for (int i = row - 1; i >= 0; i--) {
             if (board[i][col] == 'Q') {
                 return false;
             }
         }
-        // diagonal left up
+        // Check diagonal left up
         for (int i = row - 1, j = col - 1; i >= 0 && j >= 0; i--, j--) {
             if (board[i][j] == 'Q') {
                 return false;
             }
         }
-        // diagonal right up
+        // Check diagonal right up
         for (int i = row - 1, j = col + 1; j < board.length && i >= 0; i--, j++) {
             if (board[i][j] == 'Q') {
                 return false;
             }
         }
-
         return true;
     }
 
     public static void queens(char[][] board, int row) {
-        // base case
         if (row == board.length) {
             printBoard(board);
             count++;
             return;
         }
-        // for safe spot
-
         for (int j = 0; j < board.length; j++) {
             if (issafe(board, row, j)) {
                 board[row][j] = 'Q';
                 queens(board, row + 1);
-                board[row][j] = '.';
+                board[row][j] = '.'; // Backtrack
             }
         }
-
-        /*
-         * for printing all the possibilites
-         * // column loop : iterates through each col(j) in current row(row)
-         * for (int j = 0; j < board.length; j++) {
-         * board[row][j] = 'Q';
-         * queens(board, row + 1);// function call
-         * //for better understanding try to comment the below line
-         * board[row][j] = '.';// backtracking step
-         * }
-         */
     }
 
     public static boolean possibilites(char[][] board, int row) {
         if (row == board.length) {
-            // printBoard(board);
             count++;
             return true;
         }
@@ -68,7 +67,7 @@ public class Nqueens {
                 if (possibilites(board, row + 1)) {
                     return true;
                 }
-                board[row][j] = '.';
+                board[row][j] = '.'; // Backtrack
             }
         }
         return false;
@@ -85,40 +84,18 @@ public class Nqueens {
     }
 
     public static void main(String[] args) {
-        int n = 2;
+        int n = 4; // Testing with N=4
         char[][] board = new char[n][n];
-        // board creation with no players
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 board[i][j] = '.';
             }
         }
-        // queens(board, 0);
-        // System.out.println("Wasys: " + count);
-
-        // for one solution
         if (possibilites(board, 0)) {
-            System.out.println("Sol is possible");
+            System.out.println("Solution is possible");
             printBoard(board);
         } else {
             System.out.println("Solution is not possible");
         }
     }
 }
-/*
- * fun fact if u just try for n=25 the output would be lasting till days
- * as recursive call take O(n!) and issafe funtion O(n)
- * so overall O(n!)
- * only for n=10 it takes 20ms
- * for n=18 several seconds
- * for n=25 several hours or days too
- */
-/*
- * This program solves the N-Queens problem using backtracking.
- * 
- * - issafe: Checks if placing a queen at a specific position is safe.
- * - queens: Finds and prints all possible solutions to the problem.
- * - possibilites: Checks if at least one solution exists and prints it.
- * - printBoard: Utility function to display the board configuration.
- * - main: Initializes the board and demonstrates solving the problem.
- */
