@@ -1,5 +1,3 @@
-# Topic: Arrays(part2)
-
 ## Theory: Arrays (Part 2) & Advanced Patterns
 
 Advanced technical evaluations frequently necessitate the optimization of brute-force $O(N^2)$ or $O(N^3)$ algorithms into linear $O(N)$ solutions utilizing sophisticated structural patterns.
@@ -33,10 +31,3 @@ A fundamental state-tracking algorithm prioritizing temporal variance.
 3.  **Best Time to Buy and Sell Stock**: Temporal state assessment constraints.
 
 ---
-
-
-## Problems
-
-- [BestTimeToBuyAndSellStock](https://github.com/KSNauman/DSA-Java-pgms/blob/main/Arrays%28part2%29/BestTimeToBuyAndSellStock.java)
-- [MaxSubArraySum](https://github.com/KSNauman/DSA-Java-pgms/blob/main/Arrays%28part2%29/MaxSubArraySum.java)
-- [TrappingRainwater](https://github.com/KSNauman/DSA-Java-pgms/blob/main/Arrays%28part2%29/TrappingRainwater.java)

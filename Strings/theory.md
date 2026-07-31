@@ -1,5 +1,3 @@
-# Topic: Strings
-
 ## Theory: Strings & Manipulation Patterns
 
 A **String** is structurally defined as an array or sequence of characters. Within prominent object-oriented frameworks (including Java and Python), Strings exhibit strict **immutability**. This property dictates that upon instantiation, the internal state and character sequence of the object cannot be altered; any procedural modification necessitates the allocation of an entirely new memory address and object.
@@ -37,13 +35,3 @@ Evaluations frequently necessitate index-specific character manipulation. A comm
 4.  **String Compression**: Validation of complex in-place iteration and data modification protocols.
 
 ---
-
-
-## Problems
-
-- [Anagram](https://github.com/KSNauman/DSA-Java-pgms/blob/main/Strings/Anagram.java)
-- [CapitalizeFirstLetter](https://github.com/KSNauman/DSA-Java-pgms/blob/main/Strings/CapitalizeFirstLetter.java)
-- [PalindromeString](https://github.com/KSNauman/DSA-Java-pgms/blob/main/Strings/PalindromeString.java)
-- [ShortestPath](https://github.com/KSNauman/DSA-Java-pgms/blob/main/Strings/ShortestPath.java)
-- [StringBasics](https://github.com/KSNauman/DSA-Java-pgms/blob/main/Strings/StringBasics.java)
-- [StringCompression](https://github.com/KSNauman/DSA-Java-pgms/blob/main/Strings/StringCompression.java)

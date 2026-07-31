@@ -1,5 +1,3 @@
-# Topic: Arrays(part1)
-
 ## Theory: Arrays (Part 1) & Foundational Patterns
 
 An **Array** is a primary data structure comprising a collection of items stored at contiguous memory allocations. This structural architecture permits efficient data storage and random access via indexing operations.
@@ -34,11 +32,3 @@ On a **sorted** array domain, specific elements can be located in logarithmic $O
 4.  **Printing Subarrays**: Combinatorial generation of all contiguous structural subsets ($O(N^2)$ indices constraint).
 
 ---
-
-
-## Problems
-
-- [BinarySearch](https://github.com/KSNauman/DSA-Java-pgms/blob/main/Arrays%28part1%29/BinarySearch.java)
-- [PairsInArrays](https://github.com/KSNauman/DSA-Java-pgms/blob/main/Arrays%28part1%29/PairsInArrays.java)
-- [PrintSubarrays](https://github.com/KSNauman/DSA-Java-pgms/blob/main/Arrays%28part1%29/PrintSubarrays.java)
-- [ReverseArray](https://github.com/KSNauman/DSA-Java-pgms/blob/main/Arrays%28part1%29/ReverseArray.java)

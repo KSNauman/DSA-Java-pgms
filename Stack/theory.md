@@ -1,5 +1,3 @@
-# Topic: Stack
-
 ## Theory: Understanding Stacks
 
 A **Stack** is a linear data structure governed by the **Last In, First Out (LIFO)** or **First In, Last Out (FILO)** principle. Operations are strictly confined to a single end, commonly referred to as the "top" of the stack.
@@ -27,13 +25,3 @@ Stacks can be implemented via:
 *   **Min Stack**: Architecting a stack that supports `push`, `pop`, `top`, and minimum element retrieval in $O(1)$ constant time.
 
 ---
-
-
-## Problems
-
-- [NextGreaterElement](https://github.com/KSNauman/DSA-Java-pgms/blob/main/Stack/NextGreaterElement.java)
-- [StackArrayList](https://github.com/KSNauman/DSA-Java-pgms/blob/main/Stack/StackArrayList.java)
-- [StackJCF](https://github.com/KSNauman/DSA-Java-pgms/blob/main/Stack/StackJCF.java)
-- [StackLinkedList](https://github.com/KSNauman/DSA-Java-pgms/blob/main/Stack/StackLinkedList.java)
-- [StackProblems](https://github.com/KSNauman/DSA-Java-pgms/blob/main/Stack/StackProblems.java)
-- [StockSpan](https://github.com/KSNauman/DSA-Java-pgms/blob/main/Stack/StockSpan.java)

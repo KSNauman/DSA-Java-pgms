@@ -1,5 +1,3 @@
-# Topic: 2D Arrays
-
 ## Theory: 2D Arrays & Matrices
 
 A **2D Array** (or Matrix) constitutes a multi-dimensional array mapping data across specified rows and columns. Within the Java runtime, it is syntactically declared and instantiated as `int[][] matrix = new int[rows][cols]`.
@@ -34,11 +32,3 @@ Extrapolating from 1D logic, 2D prefix structures enable constant $O(1)$ queryin
 4.  **Rotate Image (Matrix)**: Complex spatial manipulation (typically resolved via matrix transposition followed by lateral row reversal).
 
 ---
-
-
-## Problems
-
-- [DiagonalSum](https://github.com/KSNauman/DSA-Java-pgms/blob/main/2D%20Arrays/DiagonalSum.java)
-- [MatrixBasics](https://github.com/KSNauman/DSA-Java-pgms/blob/main/2D%20Arrays/MatrixBasics.java)
-- [SpiralMatrix](https://github.com/KSNauman/DSA-Java-pgms/blob/main/2D%20Arrays/SpiralMatrix.java)
-- [StaircaseSearch](https://github.com/KSNauman/DSA-Java-pgms/blob/main/2D%20Arrays/StaircaseSearch.java)

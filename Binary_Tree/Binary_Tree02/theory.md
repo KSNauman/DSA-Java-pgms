@@ -1,5 +1,3 @@
-# Topic: Binary_Tree02
-
 ## Theory: Binary Trees (Part 2) & Advanced Patterns
 
 Once fundamental traversals and construction algorithms are mastered, advanced technical evaluations assess the ability to utilize DFS and BFS recursively to solve complex structural queries.
@@ -29,10 +27,3 @@ The top view represents the set of nodes visible when the hierarchical structure
 3.  **Top View / Vertical Order Traversal**: Advanced spatial mapping requiring synchronized coordinate management during traversal protocols.
 
 ---
-
-
-## Problems
-
-- [KthLevelOfTree](https://github.com/KSNauman/DSA-Java-pgms/blob/main/Binary_Tree/Binary_Tree02/KthLevelOfTree.java)
-- [LowestCommonAncestor](https://github.com/KSNauman/DSA-Java-pgms/blob/main/Binary_Tree/Binary_Tree02/LowestCommonAncestor.java)
-- [MinimumDistanceBetweenNodes](https://github.com/KSNauman/DSA-Java-pgms/blob/main/Binary_Tree/Binary_Tree02/MinimumDistanceBetweenNodes.java)

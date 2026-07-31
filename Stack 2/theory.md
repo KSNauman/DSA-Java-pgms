@@ -1,5 +1,3 @@
-# Topic: Stack 2
-
 ## Theory: Advanced Stack Patterns (Monotonic Stacks)
 
 While basic stacks are utilized for standard Last-In-First-Out (LIFO) operations, advanced stack problems frequently necessitate a structural pattern known as the **Monotonic Stack**.
@@ -30,9 +28,3 @@ This methodology optimizes a standard $O(N^2)$ exhaustive search into a linear *
 5.  **Trapping Rain Water**: Utilizing a Monotonic Decreasing Stack to efficiently compute bounded volumetric constraints.
 
 ---
-
-
-## Problems
-
-- [DuplicateParentheses](https://github.com/KSNauman/DSA-Java-pgms/blob/main/Stack%202/DuplicateParentheses.java)
-- [ValidParentheses](https://github.com/KSNauman/DSA-Java-pgms/blob/main/Stack%202/ValidParentheses.java)

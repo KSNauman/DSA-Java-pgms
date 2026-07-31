@@ -1,5 +1,3 @@
-# Topic: Binary_Tree01
-
 ## Theory: Binary Trees (Part 1) & Foundational Concepts
 
 A **Binary Tree** is a hierarchical non-linear data structure wherein each node contains a maximum of two structural children, strictly designated as the **left child** and the **right child**.
@@ -54,11 +52,3 @@ A unique binary tree can only be deterministically constructed if provided with 
 *   **Operational Logic (Preorder + Inorder)**: The first element in a Preorder sequence is definitively the root. Locating this root element within the Inorder sequence precisely delineates the boundary between the entire left subtree partition and the right subtree partition. This logical deduction is applied recursively to construct the complete hierarchy.
 
 ---
-
-
-## Problems
-
-- [BinaryTreeBasics](https://github.com/KSNauman/DSA-Java-pgms/blob/main/Binary_Tree/Binary_Tree01/BinaryTreeBasics.java)
-- [HeightOfTree](https://github.com/KSNauman/DSA-Java-pgms/blob/main/Binary_Tree/Binary_Tree01/HeightOfTree.java)
-- [SubtreeOfAnotherTree](https://github.com/KSNauman/DSA-Java-pgms/blob/main/Binary_Tree/Binary_Tree01/SubtreeOfAnotherTree.java)
-- [TopViewOfTree](https://github.com/KSNauman/DSA-Java-pgms/blob/main/Binary_Tree/Binary_Tree01/TopViewOfTree.java)

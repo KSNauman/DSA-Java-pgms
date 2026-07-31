@@ -13,9 +13,20 @@ def generate_sub_readmes(root_dir, repo_url):
         java_files = [f for f in filenames if f.endswith('.java')]
         if java_files:
             output_file = os.path.join(dirpath, 'README.md')
+            theory_file = os.path.join(dirpath, 'theory.md')
+            
+            theory_content = ""
+            if os.path.exists(theory_file):
+                with open(theory_file, mode='r', encoding='utf-8') as tf:
+                    theory_content = tf.read()
+
             with open(output_file, mode='w', encoding='utf-8') as f:
                 f.write(f"# Topic: {topic}\n\n")
-                f.write(f"This directory contains Java implementations related to **{topic}**.\n\n")
+                if theory_content:
+                    f.write(theory_content + "\n\n")
+                else:
+                    f.write(f"This directory contains Java implementations related to **{topic}**.\n\n")
+                
                 f.write("## Problems\n\n")
                 
                 for filename in sorted(java_files):
